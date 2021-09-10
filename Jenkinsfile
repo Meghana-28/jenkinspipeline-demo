@@ -1,17 +1,30 @@
-pipeline {
+pipeline{
     agent any
-
-    stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello World'
-            }
-        }
-        stage('Git')
+    stages{
+        stage('Build')
         {
             steps{
-                git 'https://github.com/Meghana-28/MavenCounterWebApp.git'
+                echo 'build successfully'
             }
         }
+        stage('git')
+         {
+             steps{
+                 git 'https://github.com/Meghana-28/MavenCounterWebApp.git'
+             }
+         }
+         stage('test')
+         {
+            steps{
+                echo 'tested successsfully'
+            }    
+         }
+         stage('deploy')
+         {
+             steps
+             {
+                  echo 'deployment successsfully'
+             }
+         }
     }
 }

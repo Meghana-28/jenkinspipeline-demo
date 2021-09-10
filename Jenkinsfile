@@ -5,6 +5,7 @@ pipeline{
         {
             steps{
                 echo 'build successfully'
+                bat "mvn clean"
             }
         }
         stage('git')

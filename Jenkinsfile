@@ -24,7 +24,7 @@ pipeline{
          {
              steps
              {
-                  echo 'deployment successsfully'
+                  echo 'deployed successsfully'
              }
          }
     }
